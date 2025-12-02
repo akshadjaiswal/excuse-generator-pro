@@ -1,3 +1,94 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    /* Color Palette */
+    --color-primary: #FF6B6B;
+    --color-secondary: #F4E4C1;
+    --color-accent: #4ECDC4;
+    --color-dark: #2C3E50;
+    --color-success: #95E1D3;
+    --color-warning: #FFB84D;
+    --color-background: #FDFBF7;
+    --color-card: #FFFFFF;
+  }
+
+  * {
+    @apply border-gray-200;
+  }
+
+  body {
+    @apply bg-background text-dark;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400;
+  }
+
+  /* Selection */
+  ::selection {
+    @apply bg-primary/20 text-dark;
+  }
+}
+
+@layer utilities {
+  /* Custom utility classes */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-lift-hover:hover {
+    @apply -translate-y-1 shadow-card-hover transition-all duration-300;
+  }
+
+  .btn-base {
+    @apply px-6 py-3 rounded-button font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply btn-base bg-primary text-white hover:bg-primary-600 hover:shadow-button-hover focus:ring-primary;
+  }
+
+  .btn-secondary {
+    @apply btn-base border-2 border-primary text-primary bg-transparent hover:bg-primary hover:text-white focus:ring-primary;
+  }
+
+  .btn-ghost {
+    @apply btn-base text-primary hover:bg-primary/10 focus:ring-primary;
+  }
+
+  .card-base {
+    @apply bg-card rounded-card shadow-card p-6 transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply card-base hover:shadow-card-hover hover:-translate-y-1;
+  }
+
+  .input-base {
+    @apply bg-secondary-300 rounded-input px-4 py-3 w-full border-2 border-transparent focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition-all;
+  }
+}
