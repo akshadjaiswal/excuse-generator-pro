@@ -62,7 +62,7 @@ export function Step3StyleSelector() {
         scenario: formData.scenario,
         relationship: formData.relationship,
         timing: formData.timing,
-        transport: formData.transport,
+        transport: formData.transport || undefined,
         personalContext: formData.personalContext,
         believabilityLevel: formData.believabilityLevel,
         tone: formData.tone,
