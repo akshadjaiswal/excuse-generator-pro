@@ -5,7 +5,7 @@ import { trackExcuseGeneration, incrementScenarioCount } from '@/lib/supabase/db
 
 const GROQ_API_KEY = process.env.GROQ_API_KEY
 const GROQ_API_URL = 'https://api.groq.com/openai/v1/chat/completions'
-const MODEL = 'llama-3.1-70b-versatile'
+const MODEL = 'llama-3.1-8b-instant' // Updated to working Groq model
 
 export async function POST(request: NextRequest) {
   try {
