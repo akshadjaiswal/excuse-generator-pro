@@ -247,7 +247,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="border-t border-gray-700 pt-8 text-center text-sm text-gray-500">
-            © 2024 Excuse Generator Pro. All rights reserved.
+            © {new Date().getFullYear()} Excuse Generator Pro. All rights reserved.
           </div>
         </div>
       </footer>
