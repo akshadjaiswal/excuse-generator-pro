@@ -300,14 +300,7 @@ PRs welcome!
 
 ---
 
-## 🙏 Acknowledgments
 
-- **Groq** for lightning-fast AI inference
-- **Supabase** for database and analytics
-- **shadcn/ui** for beautiful components
-- **Vercel** for seamless deployment
-
----
 
 <div align="center">
 
